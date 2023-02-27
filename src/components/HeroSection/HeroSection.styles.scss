@@ -1,0 +1,27 @@
+.Hero-section-container {
+  height: 95vh;
+  background-color: #c4c4c4;
+
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+
+  position: relative;
+  .text-box {
+    max-width: 66.8rem;
+
+    position: absolute;
+    top: 20%;
+    left: 15rem;
+    h1 {
+      font-size: 6.4rem;
+      font-family: "Playfair Display";
+
+      margin-bottom: 5.4rem;
+    }
+    p {
+      font-size: 2.4rem;
+
+      margin-bottom: 5.4rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// RESETS
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// VARIABLES
+:root {
+  --primary-color-1: #07484a;
+  --primary-color-2: #70908b;
+
+  --secondary-color-1: #caf3e5;
+  --secondary-color-2: #e0eff6;
+  --secondary-color-3: #eeebff;
+  --secondary-color-4: #fff4e7;
+  --secondary-color-3: #fdfbf8;
+}
