@@ -1,3 +1,53 @@
-Footer {
+.footer {
   height: 46.4rem;
+  padding: 8rem 15rem;
+  background-color: #f3f6f5;
+
+  color: #07484a;
+  font-size: 1.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  .contacts {
+    flex-basis: 30rem;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      svg {
+      }
+      span {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    }
+
+    .socials-container {
+      margin-top: 30px;
+
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+    .address {
+      margin-top: 10px;
+      font-weight: 700;
+      span {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  position: relative;
+  .Copyright {
+    position: absolute;
+    bottom: 30px;
+  }
 }
