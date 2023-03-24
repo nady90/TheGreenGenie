@@ -37,7 +37,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
+const provider = new GoogleAuthProvider(); // We can rename this googleProvider
 provider.setCustomParameters({ prompt: "select_account" });
 
 export const auth = getAuth();
@@ -79,4 +79,20 @@ export const createUserDocumentFromAuth = async (
   // if user data exists
   // return userDocREf
   return userDocRef;
+};
+
+/**
+ * Sign up functions
+ */
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+/**
+ * Sign in with email and password
+ */
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
 };
