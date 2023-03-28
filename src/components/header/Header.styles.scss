@@ -10,11 +10,30 @@
     display: flex;
     align-items: center;
     gap: 3px;
+    cursor: pointer;
+
     span {
       font-family: "Open Sans", sans-serif;
       color: var(--primary-color-1);
       font-size: 3rem;
       font-weight: 700;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1.5px;
+        width: 90%;
+        margin: 0 auto;
+        background-color: var(--primary-color-1);
+
+        transform: scale(0);
+        transform-origin: left;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover::after {
+        transform: scale(1);
+      }
     }
   }
 
@@ -30,6 +49,7 @@
     color: var(--primary-color-1);
     font-family: "Playfair Display";
     font-size: 2rem;
+    font-weight: 400;
 
     text-decoration: none;
 
@@ -39,6 +59,7 @@
 
     &:hover {
       font-weight: 700;
+      position: relative;
     }
   }
 
@@ -49,6 +70,18 @@
     img {
       width: 2.7rem;
       height: 2.7rem;
+
+      cursor: pointer;
+
+      padding: 2px;
+      box-sizing: border-box;
+      transition: border 1s ease-in-out;
+
+      border: 0px;
+
+      &:hover {
+        border: 1px solid var(--primary-color-1);
+      }
     }
   }
 }
@@ -75,4 +108,47 @@
 
 .inactiveLinkStyles {
   white-space: nowrap;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+
+    // position: absolute;
+    // bottom: -5px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    margin: 0 auto;
+
+    background-color: var(--primary-color-1);
+
+    white-space: nowrap;
+
+    // transform: scale(0);
+    transform: translateX(-60%);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 3px;
+      width: 100%;
+
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      margin: 0 auto;
+
+      background-color: var(--primary-color-1);
+
+      white-space: nowrap;
+    }
+  }
 }

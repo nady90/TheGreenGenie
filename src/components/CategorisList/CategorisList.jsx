@@ -20,7 +20,9 @@ const CategorisList = () => {
         <span>Bedroom</span>
         <span>Bedroom</span>
       </div>
-      <Button color={"green"}>All Categories →</Button>
+      <Button color={"green"}>
+        All Categories <span>→</span>
+      </Button>
     </div>
   );
 };

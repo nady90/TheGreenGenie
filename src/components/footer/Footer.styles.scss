@@ -15,11 +15,30 @@
       align-items: center;
       gap: 5px;
 
+      cursor: pointer;
+
       svg {
       }
       span {
         font-size: 2.5rem;
         font-weight: 700;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 90%;
+          margin: 0 auto;
+          background-color: var(--primary-color-1);
+
+          transform: scale(0);
+          transform-origin: left;
+          transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover::after {
+          transform: scale(1);
+        }
       }
     }
 
@@ -32,6 +51,18 @@
       img {
         width: 27px;
         height: 27px;
+
+        cursor: pointer;
+
+        box-sizing: border-box;
+        transition: border 1s ease-in-out;
+
+        outline: 0px;
+
+        &:hover {
+          outline: 1px solid var(--primary-color-1);
+          outline-offset: 2px;
+        }
       }
     }
 

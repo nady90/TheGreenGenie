@@ -3,12 +3,19 @@
   text-align: center;
   background-color: #adadad;
 
-  padding: 20% 30%;
+  // padding: 20% 30%;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  h3 {
-    font-size: 6.4rem;
-    font-family: "Playfair Display";
-    font-weight: 500;
+  div {
+    h3 {
+      font-size: 6.4rem;
+      font-family: "Playfair Display";
+      font-weight: 500;
+
+      margin-bottom: 20px;
+    }
   }
 }
