@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./Header.styles.scss";
+import { UserContext } from "../../contexts/user.context";
 
 import searchIcon from "../../assets/icons/search icon.png";
 import cartIcon from "../../assets/icons/cart icon.png";
 import profileIcon from "../../assets/icons/profile icon.png";
 
 const Header = () => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const signOutHandler = async () => {
+    const res = await signOutUser();
+    // console.log(res);
+    // setCurrentUser(null);
+    // Not needed because onAuthStateChanged will catch it.
+  };
+
   return (
     <div className="header-container">
       <div className="logo-container">
@@ -72,7 +83,13 @@ const Header = () => {
       <div className="icons-container">
         <img src={searchIcon} alt="Search icon" />
         <img src={cartIcon} alt="Cart icon" />
-        <img src={profileIcon} alt="Profile icon" />
+        {currentUser ? (
+          <span className="" onClick={signOutHandler}>
+            SIGN OUT
+          </span>
+        ) : (
+          <img src={profileIcon} alt="Profile icon" />
+        )}
       </div>
     </div>
   );

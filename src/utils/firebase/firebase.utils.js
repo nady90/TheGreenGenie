@@ -96,3 +96,13 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await signInWithEmailAndPassword(auth, email, password);
 };
+
+/** SIGN OUT */
+export const signOutUser = async () => {
+  signOut(auth);
+};
+
+/** Observer Pattern */
+export const onAuthStateChangedListener = (callback) => {
+  return onAuthStateChanged(auth, callback);
+};

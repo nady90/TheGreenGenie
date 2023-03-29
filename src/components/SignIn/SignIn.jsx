@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 
 import "./SignIn.styles.scss";
+import { UserContext } from "../../contexts/user.context";
 
 const SignIn = () => {
-  const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
+  const { setCurrentUser } = useContext(UserContext);
 
-    createUserDocumentFromAuth(user);
+  const logGoogleUser = async () => {
+    // const { user } = await signInWithGooglePopup();
+    await signInWithGooglePopup();
+
+    // setCurrentUser(user);
+    // Replaced by observer's pattern
+
+    // createUserDocumentFromAuth(user);
+    // moved into the user context
   };
 
   return (
