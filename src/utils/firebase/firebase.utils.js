@@ -106,3 +106,37 @@ export const signOutUser = async () => {
 export const onAuthStateChangedListener = (callback) => {
   return onAuthStateChanged(auth, callback);
 };
+
+/**
+ * TRANSFERRING OUR DATA COMPLETELY TO FIRESTORE INSTEAD OF RELYING ON A JSON FILE
+ */
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
+
+  objectsToAdd.forEach((object) => {
+    const docRef = doc(collectionRef, object.title.toLowerCase()); // We don't need db here because we got collectionRef from calling db
+    batch.set(docRef, object);
+  });
+
+  await batch.commit();
+  console.log("DONE WITH CATEGOREIS");
+};
+
+export const getCollectionAndDocuments = async () => {
+  const collectionRef = collection(db, "categories");
+
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
+};
