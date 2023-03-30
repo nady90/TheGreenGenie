@@ -1,9 +1,20 @@
-import React from "react";
+import { React, useContext } from "react";
 
 import "./Shop.styles.scss";
 
-function shop() {
-  return <div>shop</div>;
+import { ProductsContext } from "../../contexts/products.context";
+import ProductCard from "../../components/Product-Card/Product-card";
+
+function Shop() {
+  const { products } = useContext(ProductsContext);
+
+  return (
+    <div>
+      {products.map((product) => {
+        return <ProductCard key={product.id} product={product} />;
+      })}
+    </div>
+  );
 }
 
-export default shop;
+export default Shop;

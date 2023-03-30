@@ -8,9 +8,13 @@ import { UserContext } from "../../contexts/user.context";
 import searchIcon from "../../assets/icons/search icon.png";
 import cartIcon from "../../assets/icons/cart icon.png";
 import profileIcon from "../../assets/icons/profile icon.png";
+import CartIcon from "../Cart-icon/Cart-icon";
+import CartDropdown from "../Cart-dropdown/Cart-dropdown";
+import { CartContext } from "../../contexts/cart.context";
 
 const Header = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
   const signOutHandler = async () => {
     const res = await signOutUser();
@@ -36,7 +40,6 @@ const Header = () => {
         </svg>
         <span>INWOOD</span>
       </div>
-
       <div className="links-container">
         <NavLink
           to="/"
@@ -79,18 +82,24 @@ const Header = () => {
           Contact Us
         </NavLink>{" "}
       </div>
-
       <div className="icons-container">
         <img src={searchIcon} alt="Search icon" />
-        <img src={cartIcon} alt="Cart icon" />
+        {/* <img src={cartIcon} alt="Cart icon" /> */}
+
         {currentUser ? (
-          <span className="" onClick={signOutHandler}>
-            SIGN OUT
-          </span>
+          <>
+            <span className="" onClick={signOutHandler}>
+              SIGN OUT
+            </span>
+            <CartIcon />
+          </>
         ) : (
-          <img src={profileIcon} alt="Profile icon" />
+          <>
+            <img src={profileIcon} alt="Profile icon" />
+          </>
         )}
       </div>
+      {isCartOpen && <CartDropdown />}
     </div>
   );
 };
