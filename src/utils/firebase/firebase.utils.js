@@ -127,7 +127,7 @@ export const addCollectionAndDocuments = async (
 };
 
 export const getCollectionAndDocuments = async () => {
-  const collectionRef = collection(db, "categories");
+  const collectionRef = collection(db, "new categories");
 
   const q = query(collectionRef);
 

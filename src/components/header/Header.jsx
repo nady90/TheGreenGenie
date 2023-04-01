@@ -60,7 +60,7 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink
-          to="products"
+          to="/shop"
           className={({ isActive }) =>
             isActive ? "activeLinkStyles" : "inactiveLinkStyles"
           }

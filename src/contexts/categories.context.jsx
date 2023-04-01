@@ -4,7 +4,8 @@ import React, { createContext, useState, useEffect } from "react";
 // Old way with a json file.
 
 // New Way
-import SHOP_DATA from "../shop_data.js";
+// import SHOP_DATA from "../shop_data.js";
+import SHOP_DATA from "../production_data";
 
 import {
   addCollectionAndDocuments,
@@ -28,7 +29,8 @@ export const CategoriesProvider = ({ children }) => {
   }, []);
 
   // useEffect(() => {
-  //   addCollectionAndDocuments("categories", SHOP_DATA);
+  //   addCollectionAndDocuments("new categories", SHOP_DATA);
+  //   console.log("uploaded my database");
   // }, []);
 
   const value = { categoriesMap };
