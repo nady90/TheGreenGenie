@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./Header.styles.scss";
@@ -15,6 +15,7 @@ import { CartContext } from "../../contexts/cart.context";
 const Header = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const signOutHandler = async () => {
     const res = await signOutUser();
@@ -23,9 +24,17 @@ const Header = () => {
     // Not needed because onAuthStateChanged will catch it.
   };
 
+  const logoClickHandler = () => {
+    navigate("home");
+  };
+
+  const signInClickHandler = () => {
+    navigate("auth");
+  };
+
   return (
     <div className="header-container">
-      <div className="logo-container">
+      <div onClick={logoClickHandler} className="logo-container">
         <svg
           height="36"
           viewBox="0 0 56 56"
@@ -38,8 +47,9 @@ const Header = () => {
             fill="#07484A"
           />
         </svg>
-        <span>INWOOD</span>
+        <span>TheGreenGenie</span>
       </div>
+
       <div className="links-container">
         <NavLink
           to="/"
@@ -83,20 +93,21 @@ const Header = () => {
         </NavLink>{" "}
       </div>
       <div className="icons-container">
-        <img src={searchIcon} alt="Search icon" />
+        <img className="search-icon" src={searchIcon} alt="Search icon" />
         {/* <img src={cartIcon} alt="Cart icon" /> */}
 
         {currentUser ? (
           <>
-            <span className="" onClick={signOutHandler}>
-              SIGN OUT
-            </span>
+            <div className="sign-out-button" onClick={signOutHandler}>
+              Sign Out
+            </div>
             <CartIcon />
           </>
         ) : (
-          <>
+          <div onClick={signInClickHandler} className="sign-in-icon-container">
             <img src={profileIcon} alt="Profile icon" />
-          </>
+            <div>Sign In</div>
+          </div>
         )}
       </div>
       {isCartOpen && <CartDropdown />}

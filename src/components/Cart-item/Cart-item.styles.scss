@@ -1,0 +1,25 @@
+.cart-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+
+  // max-height: 100px;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 70px;
+  }
+
+  .cart-item-info {
+    h2 {
+      font-size: 2rem;
+    }
+    span {
+      font-size: 1.6rem;
+    }
+  }
+}

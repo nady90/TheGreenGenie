@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
 
+  position: relative;
   .logo-container {
     display: flex;
     align-items: center;
@@ -33,6 +34,13 @@
 
       &:hover::after {
         transform: scale(1);
+      }
+    }
+
+    svg {
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        transform: rotate(360deg);
       }
     }
   }
@@ -65,7 +73,7 @@
 
   .icons-container {
     display: flex;
-    gap: 45px;
+    gap: 30px;
 
     img {
       width: 2.7rem;
@@ -73,15 +81,55 @@
 
       cursor: pointer;
 
-      padding: 2px;
-      box-sizing: border-box;
-      transition: border 1s ease-in-out;
+      // padding: 2px;
+      // box-sizing: border-box;
+      // transition: border 1s ease-in-out;
 
-      border: 0px;
+      // border: 0px;
+
+      // &:hover {
+      //   // border: 1px solid var(--primary-color-1);
+      //   outline: 1px solid var(--primary-color-1);
+      // }
+    }
+
+    .search-icon {
+      &:hover {
+        // border: 1px solid var(--primary-color-1);
+        outline: 1px solid var(--primary-color-1);
+        outline-offset: 2px;
+      }
+    }
+
+    .sign-in-icon-container {
+      display: flex;
+      color: var(--primary-color-1);
+      font-size: 1.6rem;
+      font-weight: 500;
+      gap: 5px;
+      align-items: center;
 
       &:hover {
-        border: 1px solid var(--primary-color-1);
+        // border: 1px solid var(--primary-color-1);
+        outline: 1px solid var(--primary-color-1);
+        outline-offset: 2px;
       }
+    }
+  }
+
+  .sign-out-button {
+    font-size: 1.6rem;
+
+    background-color: var(--primary-color-1);
+    color: white;
+    padding: 5px 7px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgb(124, 124, 124);
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 }

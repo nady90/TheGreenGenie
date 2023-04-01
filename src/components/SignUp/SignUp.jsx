@@ -38,6 +38,7 @@ const SignUp = () => {
         password
       );
       await createUserDocumentFromAuth(user, { displayName });
+      setFormFields(defaultFormFields);
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         alert("The email is already in use");
@@ -47,11 +48,12 @@ const SignUp = () => {
   };
 
   return (
-    <>
-      <h2>SignUp COMPONENT</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Display name</label>
+    <div className="sign-up">
+      <h2>Sign Up With Email and Password</h2>
+      <form className="sign-up-form" onSubmit={handleSubmit}>
+        <label htmlFor="displayName">First Name</label>
         <input
+          id="displayName"
           type="text"
           name="displayName"
           value={displayName}
@@ -59,8 +61,9 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <input
+          id="email"
           type="email"
           name="email"
           value={email}
@@ -68,8 +71,9 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <label>Password</label>
+        <label htmlFor="password">Password</label>
         <input
+          id="password"
           type="password"
           name="password"
           value={password}
@@ -77,8 +81,9 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <label>Confirm Password</label>
+        <label htmlFor="confirm-password">Confirm Password</label>
         <input
+          id="confirm-password"
           type="password"
           name="confirmPassword"
           value={confirmPassword}
@@ -88,7 +93,7 @@ const SignUp = () => {
 
         <button type="submit">SIGN UP</button>
       </form>
-    </>
+    </div>
   );
 };
 

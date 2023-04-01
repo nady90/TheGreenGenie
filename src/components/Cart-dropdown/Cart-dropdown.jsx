@@ -16,12 +16,13 @@ const CartDropdown = () => {
 
   return (
     <div className="cart-dropdown-container">
-      CartDropdown
+      <div className="cart-dropdown-title">Your Cart</div>
       <div className="cart-items">
         {cartItems.map((item) => {
           return <CartItem key={item.id} cartItem={item} />;
         })}
       </div>
+
       <button onClick={goToCheckoutHandler}>GO TO CHECKOUT</button>
     </div>
   );

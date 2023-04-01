@@ -6,14 +6,10 @@ import SignUp from "../../components/SignUp/SignUp";
 
 const Authentication = () => {
   return (
-    <>
-      <h1>authentication</h1>
-      <hr />
+    <div className="authentication-page">
       <SignIn />
-      <hr />
       <SignUp />
-    </>
+    </div>
   );
 };
-
 export default Authentication;

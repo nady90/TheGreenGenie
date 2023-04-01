@@ -27,7 +27,7 @@ const Footer = () => {
               fill="#07484A"
             />
           </svg>
-          <span>INWOOD</span>
+          <span>TheGreenGenie</span>
         </div>
 
         <div className="socials-container">
@@ -40,9 +40,9 @@ const Footer = () => {
 
         <div className="address">
           <h3>Address</h3>
-          <span>+123 654 987</span>
-          <span>877 The Bronx, NY</span>
-          <span>14568, USA</span>
+          <span>+2 10-196-999-33</span>
+          <span>194 Tieba St, Alexandria</span>
+          <span>21523, Egypt</span>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ const Footer = () => {
       />
 
       <div className="Copyright">
-        Copyright ©2020 INWOOD. All Rights Reserved
+        Copyright ©2023 TheGreenGenie. All Rights Reserved
       </div>
     </div>
   );

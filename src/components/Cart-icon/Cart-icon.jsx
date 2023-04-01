@@ -13,8 +13,8 @@ const CartIcon = () => {
   };
 
   return (
-    <div onClick={toggleIsCartOpen}>
-      <img src={logo} alt="our logo" />
+    <div className="cart-icon-container" onClick={toggleIsCartOpen}>
+      <img className="cart-image" src={logo} alt="our logo" />
       <span className="item-count">{cartCount}</span>
     </div>
   );
