@@ -9,10 +9,11 @@ const CategoryPreview = ({ title, products }) => {
       <h2>
         <span>{title.toUpperCase()}</span>
       </h2>
-      <div>
+      <div className="pdts-container">
         {products
           .filter((_, idx) => {
-            return idx < 4;
+            // return idx < 4;
+            return idx < 40;
           })
           .map((pdt) => {
             return <ProductCard key={pdt.id} product={pdt} />;

@@ -28,10 +28,10 @@ export const CategoriesProvider = ({ children }) => {
     getCategoriesMap();
   }, []);
 
-  // useEffect(() => {
-  //   addCollectionAndDocuments("new categories", SHOP_DATA);
-  //   console.log("uploaded my database");
-  // }, []);
+  useEffect(() => {
+    addCollectionAndDocuments("new categories", SHOP_DATA);
+    console.log("uploaded my database");
+  }, []);
 
   const value = { categoriesMap };
 

@@ -234,6 +234,114 @@ const SHOP_DATA = [
       },
     ],
   },
+  {
+    title: "Smart Watches",
+    items: [
+      {
+        id: 36,
+        name: "Smart Watch, 1.9",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Fsmart%20watches%2Fw2.jpg?alt=media&token=476e4648-a241-4cb2-8596-5508d735dcba",
+        price: 40,
+      },
+      {
+        id: 37,
+        name: "Pautios Smart Watch",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Fsmart%20watches%2Fw3.jpg?alt=media&token=84e1eeb6-7e4c-4de8-a06d-e094e53eb94d",
+        price: 50,
+      },
+      {
+        id: 38,
+        name: "Military Smart Watch for Men",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Fsmart%20watches%2Fw1.jpg?alt=media&token=524cd813-cca2-4336-b29a-e208e1e4fedd",
+        price: 120,
+      },
+      {
+        id: 39,
+        name: "ZYCZWL Military Smart Watches",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Fsmart%20watches%2Fw4.jpg?alt=media&token=90047cc3-f7b9-4ebd-aff6-b2390f6528cc",
+        price: 229,
+      },
+      {
+        id: 40,
+        name: "GRV Smart Watch for iOS",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Fsmart%20watches%2Fw5.jpg?alt=media&token=41e128e0-f632-491c-937b-e5b7d4e16a21",
+        price: 99,
+      },
+      {
+        id: 41,
+        name: "Apple Watch Series 4",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Fsmart%20watches%2Fw6.jpg?alt=media&token=d98b451a-0518-4fc5-9db1-2cb282dab819",
+        price: 149,
+      },
+    ],
+  },
+  {
+    title: "Toys",
+    items: [
+      {
+        id: 442,
+        name: "Garbo Star STEM Building Projects Model Airplane",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft1.jpg?alt=media&token=e105a8ae-eb04-48e9-95f9-ee1f5ad4d026",
+        price: 29,
+      },
+      {
+        id: 443,
+        name: "BaLaM STEM Projects for Kids",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft2.jpg?alt=media&token=74c59319-4aed-4cc1-9f8a-a046324898ea",
+        price: 18,
+      },
+      {
+        id: 444,
+        name: "Drones with Camera",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft3.jpg?alt=media&token=b5faa2fc-de00-4066-a337-515bf791e9f2",
+        price: 79,
+      },
+      {
+        id: 445,
+        name: "Gskyer Telescope",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft4.jpg?alt=media&token=0995a2bd-bdc1-496b-82df-677cc0d04762",
+        price: 99,
+      },
+      {
+        id: 446,
+        name: "Henoda Robot Toys",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft5.jpg?alt=media&token=308fa0b8-aabf-4214-a06a-bc1e48787f9a",
+        price: 39,
+      },
+      {
+        id: 447,
+        name: "AESGOGO STEM Projects",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft6.jpg?alt=media&token=1e97544d-fdfb-494c-972e-3e97675a1952",
+        price: 15,
+      },
+      {
+        id: 448,
+        name: "Sillbird Hurricane Dragon Building Kit",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft7.jpg?alt=media&token=07a08c3a-0e3b-4c06-9ee6-5343db1dce67",
+        price: 49,
+      },
+      {
+        id: 449,
+        name: "QDRAGON Mini Basketball Hoop",
+        imageUrl:
+          "https://firebasestorage.googleapis.com/v0/b/e-commerce-with-react-23bec.appspot.com/o/product%20images%2Ftoys%2Ft8.jpg?alt=media&token=c8ad1b13-f4f7-487d-b9f5-a37e86ae5f5c",
+        price: 45,
+      },
+    ],
+  },
 ];
 
 export default SHOP_DATA;

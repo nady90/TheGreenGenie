@@ -1,0 +1,17 @@
+.categoriy-preview-container {
+  padding: 5rem 5rem;
+
+  h2 {
+    span {
+      font-size: 3rem;
+      color: var(--primary-color-1);
+    }
+    margin-bottom: 2.5rem;
+  }
+
+  .pdts-container {
+    display: flex;
+    gap: 10rem;
+    overflow-x: auto;
+  }
+}

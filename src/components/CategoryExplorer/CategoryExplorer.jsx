@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 import "./CategoryExplorer.styles.scss";
 import CategorisList from "../CategorisList/CategorisList";
 import Category from "../category/Category";
+import { CategoriesContext } from "../../contexts/categories.context";
 
 const CategoryExplorer = () => {
+  const { categoriesMap } = useContext(CategoriesContext);
+  const [highLightedCategory, setHighLightedCategory] = useState(null);
+
+  console.log(categoriesMap);
+
   return (
     <div className="category-explorer-container">
       <h2>Explore by Category</h2>
       <div className="categories-main-body">
-        <CategorisList />
+        <CategorisList highLightedCategory={highLightedCategory} />
         <div className="categories-container">
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
-          <Category />
+          {Object.keys(categoriesMap).map((title) => {
+            const products = categoriesMap[title];
+            return <Category key={title} category={title} />;
+          })}
         </div>
       </div>
     </div>

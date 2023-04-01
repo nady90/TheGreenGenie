@@ -1,0 +1,40 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 2rem 0;
+
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .card-footer {
+    .product-name {
+      display: block;
+      font-size: 1.7rem;
+    }
+    .price {
+      display: block;
+      font-size: 1.6rem;
+
+      margin-top: 1rem;
+      color: var(--primary-color-1);
+      span {
+        color: rgb(61, 61, 61);
+      }
+    }
+  }
+
+  button {
+    padding: 1.2rem 3rem;
+    // max-width: 80%;
+    color: white;
+    background-color: var(--primary-color-1);
+    border: none;
+    border-radius: 5px;
+  }
+}
