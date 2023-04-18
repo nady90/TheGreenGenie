@@ -9,8 +9,6 @@ const CategoryExplorer = () => {
   const { categoriesMap } = useContext(CategoriesContext);
   const [highLightedCategory, setHighLightedCategory] = useState(null);
 
-  console.log(categoriesMap);
-
   return (
     <div className="category-explorer-container">
       <h2>Explore by Category</h2>

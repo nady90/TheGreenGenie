@@ -30,7 +30,7 @@ export const CategoriesProvider = ({ children }) => {
 
   useEffect(() => {
     addCollectionAndDocuments("new categories", SHOP_DATA);
-    console.log("uploaded my database");
+    // console.log("uploaded my database");
   }, []);
 
   const value = { categoriesMap };

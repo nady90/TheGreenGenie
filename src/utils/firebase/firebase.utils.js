@@ -123,7 +123,7 @@ export const addCollectionAndDocuments = async (
   });
 
   await batch.commit();
-  console.log("DONE WITH CATEGOREIS");
+  // console.log("DONE WITH CATEGOREIS");
 };
 
 export const getCollectionAndDocuments = async () => {
