@@ -4,9 +4,14 @@ import "./CategoryExplorer.styles.scss";
 import CategorisList from "../CategorisList/CategorisList";
 import Category from "../category/Category";
 import { CategoriesContext } from "../../contexts/categories.context";
+import CategoryPreview from "../../components/category-preview/Category-preview";
+import { useSelector } from "react-redux";
+import { selectCategoriesMap } from "../../store/categories/category.selector";
 
 const CategoryExplorer = () => {
-  const { categoriesMap } = useContext(CategoriesContext);
+  // const { categoriesMap } = useContext(CategoriesContext);
+  const categoriesMap = useSelector(selectCategoriesMap);
+
   const [highLightedCategory, setHighLightedCategory] = useState(null);
 
   return (

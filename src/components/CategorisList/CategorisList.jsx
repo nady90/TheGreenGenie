@@ -4,9 +4,12 @@ import "./CategorisList.styles.scss";
 import searchIcon from "../../assets/icons/search icon.png";
 import Button from "../button/Button";
 import { CategoriesContext } from "../../contexts/categories.context";
+import { useSelector } from "react-redux";
+import { selectCategoriesMap } from "../../store/categories/category.selector";
 
 const CategorisList = ({ highLightedCategory }) => {
-  const { categoriesMap } = useContext(CategoriesContext);
+  // const { categoriesMap } = useContext(CategoriesContext);
+  const categoriesMap = useSelector(selectCategoriesMap);
 
   return (
     <div className="CategorisList">

@@ -11,9 +11,12 @@ import profileIcon from "../../assets/icons/profile icon.png";
 import CartIcon from "../Cart-icon/Cart-icon";
 import CartDropdown from "../Cart-dropdown/Cart-dropdown";
 import { CartContext } from "../../contexts/cart.context";
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 const Header = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const currentUser = useSelector(selectCurrentUser);
+
   const { isCartOpen } = useContext(CartContext);
   const navigate = useNavigate();
 

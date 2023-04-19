@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -9,6 +9,9 @@ import { CategoriesContext } from "../../contexts/categories.context";
 import CategoryPreview from "../../components/category-preview/Category-preview";
 import CategoriesPreview from "../categories-preview/Categries-preview";
 import CategoryInventory from "../../components/CategoryInventory/CategoryInventory";
+
+import { useDispatch } from "react-redux";
+import { getCategoriesArray } from "../../utils/firebase/firebase.utils";
 
 function Shop() {
   return (

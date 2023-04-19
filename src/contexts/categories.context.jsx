@@ -9,7 +9,7 @@ import SHOP_DATA from "../production_data";
 
 import {
   addCollectionAndDocuments,
-  getCollectionAndDocuments,
+  getCategoriesArray,
 } from "../utils/firebase/firebase.utils.js";
 
 export const CategoriesContext = createContext({
@@ -21,17 +21,17 @@ export const CategoriesProvider = ({ children }) => {
 
   useEffect(() => {
     const getCategoriesMap = async () => {
-      const categoryMap = await getCollectionAndDocuments();
+      const categoryMap = await getCategoriesArray();
       // console.log(categoryMap);
       setCategoriesMap(categoryMap);
     };
     getCategoriesMap();
   }, []);
 
-  useEffect(() => {
-    addCollectionAndDocuments("new categories", SHOP_DATA);
-    // console.log("uploaded my database");
-  }, []);
+  // useEffect(() => {
+  //   addCollectionAndDocuments("new categories", SHOP_DATA);
+  //   // console.log("uploaded my database");
+  // }, []);
 
   const value = { categoriesMap };
 
