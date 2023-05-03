@@ -50,6 +50,10 @@
     bottom: 20%;
     left: 5%;
   }
+
+  &:hover {
+    outline: 3px solid #008ecc;
+  }
 }
 
 .product-banner.yellow {

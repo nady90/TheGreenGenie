@@ -5,7 +5,7 @@
 
   h2 {
     font-size: 2.2rem;
-    color: var(--primary-color-1);
+    color: #008ecc;
   }
 
   .sign-up-form {
@@ -25,16 +25,19 @@
       font-size: 1.8rem;
 
       padding: 1rem;
-      background-color: var(--primary-color-1);
+      background-color: #008ecc;
       color: white;
       border-radius: 5px;
-      box-shadow: 3px 3px 5px rgb(163, 163, 163);
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      border: none;
 
       cursor: pointer;
 
-      transition: transform 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
-        transform: translateY(-3px);
+        transform: translateY(-1px);
+        box-shadow: 1px 1px 15px 0.5px #818181;
       }
     }
   }

@@ -46,10 +46,10 @@ const ProductCategorySummary = ({ type, items }) => {
       </div>
       <div className="bottom-div">
         {items &&
-          items.map((item) => {
+          items.map((item, idx) => {
             return (
               <>
-                <div className="item-container">
+                <div className="item-container" key={idx}>
                   <div className="image-container" key={item.title}>
                     <img src={item.categoryImage} alt={item.title} />
                   </div>

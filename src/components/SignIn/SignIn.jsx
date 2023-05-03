@@ -6,6 +6,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import "./SignIn.styles.scss";
+import { useNavigate } from "react-router";
 
 const defaultSignInFormFields = {
   email: "",
@@ -17,6 +18,7 @@ const SignIn = () => {
     defaultSignInFormFields
   );
   const { email, password } = signInFormFields;
+  const navigate = useNavigate();
 
   const logGoogleUser = async () => {
     // const { user } = await signInWithGooglePopup();
@@ -44,7 +46,8 @@ const SignIn = () => {
         password
       );
       // await createUserDocumentFromAuth(user, { displayName });
-      setSignInFormFields(defaultFormFields);
+      setSignInFormFields(defaultSignInFormFields);
+      navigate("/");
     } catch (error) {
       if (error.code === "auth/user-not-found") {
         alert("This email is not registered. Please sign up first.");

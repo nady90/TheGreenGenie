@@ -5,6 +5,7 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import "./SignUp.styles.scss";
+import { useNavigate } from "react-router";
 
 const defaultFormFields = {
   displayName: "",
@@ -16,6 +17,7 @@ const defaultFormFields = {
 const SignUp = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -45,6 +47,7 @@ const SignUp = () => {
       }
       console.log(error);
     }
+    navigate("/");
   };
 
   return (
