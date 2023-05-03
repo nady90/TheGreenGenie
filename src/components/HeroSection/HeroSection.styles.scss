@@ -1,27 +1,57 @@
 .Hero-section-container {
-  height: 95vh;
-  background-color: #c4c4c4;
-
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  height: 42vh;
+  background-color: #fff;
 
   position: relative;
-  .text-box {
-    max-width: 66.8rem;
 
-    position: absolute;
-    top: 20%;
-    left: 15rem;
-    h1 {
-      font-size: 6.4rem;
-      font-family: "Playfair Display";
+  padding: 50px 0px;
 
-      margin-bottom: 5.4rem;
-    }
-    p {
-      font-size: 2.4rem;
+  .carousel-container {
+    // max-width: 120rem;
+    height: 36.1rem;
+    // background-color: red;
+    display: flex;
+    justify-content: center;
 
-      margin-bottom: 5.4rem;
+    .carousel {
+      max-width: 120rem;
+
+      height: 100%;
+      border-radius: 1.6rem;
+
+      margin: 0 atuo;
+
+      .control-arrow {
+        height: 31.1rem;
+        border-radius: 1.6rem;
+      }
+
+      .banner-container {
+        position: relative;
+        img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+
+        .txt-container {
+          color: #fff;
+          position: absolute;
+          top: 20%;
+          left: 10%;
+          // background-color: #008ecc;
+          .description {
+            font-size: 3rem;
+          }
+          .title {
+            color: #fff;
+            font-size: 6.3rem;
+          }
+          .offer {
+            font-size: 3rem;
+          }
+        }
+      }
     }
   }
 }

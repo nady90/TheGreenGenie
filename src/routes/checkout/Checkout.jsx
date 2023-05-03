@@ -1,20 +1,31 @@
 import React, { useContext } from "react";
 import "./Checkout.styles.scss";
 
-import { CartContext } from "../../contexts/cart.context";
+import { useSelector } from "react-redux";
+
+import {
+  selectCartItems,
+  selectCartTotal,
+} from "../../store/cart/cart.selector";
+
+import { useDispatch } from "react-redux";
+import {
+  addItemToCart,
+  clearItemFromCart,
+  removeItemFromCart,
+} from "../../store/cart/cart.action";
 
 const Checkout = () => {
-  const {
-    cartItems,
-    addItemToCart,
-    removeItemFromCart,
-    clearItemFromCart,
-    cartTotal,
-  } = useContext(CartContext);
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+  const cartTotal = useSelector(selectCartTotal);
 
   const clearItemHandler = (item) => {
-    clearItemFromCart(item);
+    dispatch(clearItemFromCart(cartItems, item));
   };
+  const addItemHandler = (item) => dispatch(addItemToCart(cartItems, item));
+  const removeItemHandler = (item) =>
+    dispatch(removeItemFromCart(cartItems, item));
 
   return (
     <div className="checkout-page">
@@ -43,7 +54,7 @@ const Checkout = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   onClick={() => {
-                    removeItemFromCart(item);
+                    removeItemHandler(item);
                   }}
                 >
                   <g id="Edit / Remove_Minus_Circle">
@@ -63,7 +74,7 @@ const Checkout = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   onClick={() => {
-                    addItemToCart(item);
+                    addItemHandler(item);
                   }}
                 >
                   <g id="Edit / Add_Plus_Circle">

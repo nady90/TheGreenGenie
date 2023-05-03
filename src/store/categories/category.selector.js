@@ -11,7 +11,8 @@ export const selectCategoriesMap = createSelector(
   [selectCategories],
   (categories) =>
     categories.reduce((acc, category) => {
-      const { title, items } = category;
+      const { title, items, categoryImage } = category;
+      console.log(categoryImage);
       acc[title.toLowerCase()] = items;
       return acc;
     }, {})
@@ -24,3 +25,8 @@ export const selectCategoriesMap = createSelector(
 //     return acc;
 //   }, {});
 // };
+
+export const selectCategoriesIsLoading = createSelector(
+  [selectCategoryReducer],
+  (categoriesSlice) => categoriesSlice.isLoading
+);

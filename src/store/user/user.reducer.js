@@ -1,5 +1,9 @@
 import { USER_ACTION_TYPES } from "./user.types";
 
+const INITIAL_STATE = {
+  currentUser: null,
+};
+
 export const userReducer = (state = INITIAL_STATE, action) => {
   // console.log("DISPATCHED");
   // console.log(state);
@@ -13,8 +17,4 @@ export const userReducer = (state = INITIAL_STATE, action) => {
     default:
       return state;
   }
-};
-
-const INITIAL_STATE = {
-  currentUser: null,
 };

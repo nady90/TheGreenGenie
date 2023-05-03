@@ -134,7 +134,6 @@ export const getCategoriesArray = async () => {
   const querySnapshot = await getDocs(q);
 
   // This will get us the data from the collection
-  console.log(querySnapshot.docs.map((docSnapshot) => docSnapshot.data()));
   return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
 
   // const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {

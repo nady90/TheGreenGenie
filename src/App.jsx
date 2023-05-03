@@ -8,27 +8,27 @@ import Authentication from "./routes/authentication/Authentication";
 import Shop from "./routes/shop/Shop";
 import Checkout from "./routes/checkout/Checkout";
 
-import { createContext, useReducer } from "react";
-
 import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,
 } from "./utils/firebase/firebase.utils";
 
-import { createAction } from "./utils/reducer/reducer.utils";
 import { setCurrentUser } from "./store/user/user.action";
 import { useDispatch } from "react-redux";
-import { setCategories } from "./store/categories/category.action.js";
-import { getCategoriesArray } from "./utils/firebase/firebase.utils";
+import { fetchCategoriesAsync } from "./store/categories/category.action.js";
+
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     const getCategoriesMap = async () => {
-      const categoriesArray = await getCategoriesArray();
+      // const categoriesArray = await getCategoriesArray();
 
-      dispatch(setCategories(categoriesArray));
+      // console.log(categoriesArray);
+
+      // dispatch(setCategories(categoriesArray));
+      dispatch(fetchCategoriesAsync());
       // setCategoriesMap(categoryMap);
     };
     getCategoriesMap();

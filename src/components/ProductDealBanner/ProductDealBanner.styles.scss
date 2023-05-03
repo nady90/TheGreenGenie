@@ -1,0 +1,97 @@
+.product-banner {
+  width: 32%;
+  aspect-ratio: 2/1;
+  border-radius: 1.6rem;
+  cursor: pointer;
+
+  position: relative;
+  .item-img {
+    width: 30%;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    position: absolute;
+
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .banner-category {
+    border-radius: 8px;
+
+    width: 40%;
+    aspect-ratio: 4/1;
+
+    position: absolute;
+    left: 5%;
+    top: 15%;
+
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    padding: 5px 10px;
+  }
+
+  .banner-discount {
+    position: absolute;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #222222;
+
+    bottom: 20%;
+    left: 5%;
+  }
+}
+
+.product-banner.yellow {
+  background-color: #fff3cc;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 140% 150%;
+
+  .banner-category {
+    background-color: #f6de8d;
+    color: #222222;
+  }
+}
+
+.product-banner.blue {
+  background-color: #f3f9fb;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 140% 150%;
+
+  .banner-category {
+    background-color: #ffd1d1;
+    color: #000;
+  }
+
+  .banner-discount {
+    color: 000;
+  }
+}
+
+.product-banner.pink {
+  background-color: #ffecdf;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 140% 150%;
+
+  .banner-category {
+    background-color: #ffd1b0;
+    color: #222222;
+  }
+
+  .banner-discount {
+    color: #222222;
+  }
+}
