@@ -3,6 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import axios from "axios";
 
+import { useDispatch } from "react-redux";
+
 import "./Header.styles.scss";
 
 import searchIcon from "../../assets/icons/search icon.png";
@@ -13,6 +15,7 @@ import CartDropdown from "../Cart-dropdown/Cart-dropdown";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { setIsCartOpen } from "../../store/cart/cart.action";
 
 const Header = () => {
   const currentUser = useSelector(selectCurrentUser);
@@ -26,6 +29,8 @@ const Header = () => {
     city: "",
     timezone: "",
   });
+
+  const dispatch = useDispatch();
 
   const getGeoInfo = () => {
     axios
@@ -51,6 +56,8 @@ const Header = () => {
   }, []);
 
   const signOutHandler = async () => {
+    dispatch(setIsCartOpen(false));
+    console.log("logged out");
     const res = await signOutUser();
     // console.log(res);
     // setCurrentUser(null);
@@ -259,7 +266,7 @@ const Header = () => {
             </>
           )}
         </div>
-        {isCartOpen && <CartDropdown />}
+        {isCartOpen ? <CartDropdown /> : null}
       </div>
     </>
   );

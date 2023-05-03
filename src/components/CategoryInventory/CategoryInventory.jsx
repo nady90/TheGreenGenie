@@ -11,10 +11,15 @@ const CategoryInventory = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
 
   const { category } = useParams();
-  const [products, setProducts] = useState(categoriesMap[category]);
+
+  const [products, setProducts] = useState(
+    categoriesMap[category.toLowerCase()]
+  );
+
+  window.scrollTo(0, 0);
 
   useEffect(() => {
-    setProducts(categoriesMap[category]);
+    setProducts(categoriesMap[category.toLowerCase()]);
     console.log(products);
   }, [categoriesMap, category]);
 

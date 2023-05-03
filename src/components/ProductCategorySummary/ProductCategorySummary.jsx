@@ -2,6 +2,8 @@ import React from "react";
 import "./ProductCategorySummary.styles.scss";
 
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
 const styles = {
   width: "132px",
@@ -9,6 +11,8 @@ const styles = {
 };
 
 const ProductCategorySummary = ({ type, items }) => {
+  const navigate = useNavigate;
+
   let titleNeutral;
   let titlePrimary;
   if (type === "categories") {
@@ -23,7 +27,7 @@ const ProductCategorySummary = ({ type, items }) => {
           <span className="neutral-txt">{titleNeutral}</span>
           <span className="primary-txt">{titlePrimary}</span>
         </h3>
-        <div className="view-all-container">
+        <div className="view-all-container" onClick={() => navigate("/shop")}>
           <NavLink className="view-all-link" to={"/shop"}>
             View All
           </NavLink>
@@ -48,14 +52,14 @@ const ProductCategorySummary = ({ type, items }) => {
         {items &&
           items.map((item, idx) => {
             return (
-              <>
-                <div className="item-container" key={idx}>
+              <NavLink to={`/shop/${item.title}`} key={idx}>
+                <div className="item-container">
                   <div className="image-container" key={item.title}>
                     <img src={item.categoryImage} alt={item.title} />
                   </div>
                   <p>{item.title}</p>
                 </div>
-              </>
+              </NavLink>
             );
           })}
       </div>

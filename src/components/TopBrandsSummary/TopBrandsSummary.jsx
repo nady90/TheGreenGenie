@@ -5,9 +5,11 @@ import { NavLink } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { selectCategoriesMap } from "../../store/categories/category.selector";
+import { useNavigate } from "react-router-dom";
 
 const TopBrandsSummary = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
+  const navigate = useNavigate();
 
   return (
     <div className={`top-brands-summary-container`}>
@@ -16,7 +18,7 @@ const TopBrandsSummary = () => {
           <span className="neutral-txt">Top </span>
           <span className="primary-txt">Electroince Brands</span>
         </h3>
-        <div className="view-all-container">
+        <div className="view-all-container" onClick={() => navigate("/shop")}>
           <NavLink className="view-all-link" to={"/shop"}>
             View All
           </NavLink>

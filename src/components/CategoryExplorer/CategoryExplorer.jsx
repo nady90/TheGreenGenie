@@ -18,6 +18,7 @@ const CategoryExplorer = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
   const cateogires = useSelector(selectCategories);
 
+
   const [highLightedCategory, setHighLightedCategory] = useState(null);
 
   return (

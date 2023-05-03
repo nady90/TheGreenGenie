@@ -1,8 +1,11 @@
 import React from "react";
 import "./OffersSummary.styles.scss";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const OffersSummary = ({ items }) => {
+  const navigate = useNavigate();
+
   return (
     <div className={`offers-summary-container`}>
       <div className="top-div">
@@ -10,7 +13,10 @@ const OffersSummary = ({ items }) => {
           <span className="neutral-txt">Grab the best deal on </span>
           <span className="primary-txt">Smartphones</span>
         </h3>
-        <div className="view-all-container">
+        <div
+          className="view-all-container"
+          onClick={() => navigate("/shop/smart phones")}
+        >
           <NavLink className="view-all-link" to={"/shop"}>
             View All
           </NavLink>

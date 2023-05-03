@@ -21,7 +21,7 @@ const CartIcon = () => {
   const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen));
 
   return (
-    <div className="cart-container" onClick={toggleIsCartOpen}>
+  <div className="cart-container" onClick={toggleIsCartOpen}>
       <svg
         width="20"
         height="21"

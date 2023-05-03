@@ -13,6 +13,7 @@ import Spinner from "../../components/spinner/Spinner";
 function CategoriesPreview() {
   const categoriesMap = useSelector(selectCategoriesMap);
   const isLoading = useSelector(selectCategoriesIsLoading);
+  window.scrollTo(0, 0);
 
   return (
     <>

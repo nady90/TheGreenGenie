@@ -23,6 +23,7 @@ const SignIn = () => {
   const logGoogleUser = async () => {
     // const { user } = await signInWithGooglePopup();
     await signInWithGooglePopup();
+    navigate("/");
 
     // setCurrentUser(user);
     // Replaced by observer's pattern

@@ -6,7 +6,11 @@ import bgBlack from "../../assets/bgCirclesBlack.png";
 import bgBlue from "../../assets/bgCirclesBlue.png";
 import bgPink from "../../assets/bgCirclesPink.png";
 
+import { useNavigate } from "react-router-dom";
+
 const ProductDealBanner = ({ item, category, color }) => {
+  const navigate = useNavigate();
+
   const bgColorImg = () => {
     if (color === "yellow") {
       return bgYellow;
@@ -23,6 +27,7 @@ const ProductDealBanner = ({ item, category, color }) => {
       style={{
         backgroundImage: `url(${bgColorImg()})`,
       }}
+      onClick={() => navigate(`/shop/${category}`)}
     >
       <img className="item-img" src={item.imageUrl} alt="" />
       <div className="banner-category">{category}</div>
