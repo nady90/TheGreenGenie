@@ -7,10 +7,14 @@ import { addItemToCart } from "../../store/cart/cart.action";
 import { useSelector } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
 
+import { useNavigate } from "react-router";
+
 const ProductCard = ({ product }) => {
   const { name, id, imageUrl, price } = product;
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
+
+  const navigate = useNavigate();
 
   const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
@@ -23,7 +27,17 @@ const ProductCard = ({ product }) => {
           <span> Price: </span>${price}
         </span>
       </div>
-      <button onClick={addProductToCart}>BUY BUTTON</button>
+      <div className="btns-container">
+        <button className="buy-btn" onClick={addProductToCart}>
+          BUY BUTTON
+        </button>
+        <button
+          className="details-btn"
+          onClick={() => navigate(`/product/${id}`)}
+        >
+          PRODUCT DETAILS
+        </button>
+      </div>
     </div>
   );
 };

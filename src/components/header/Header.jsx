@@ -139,7 +139,7 @@ const Header = () => {
             </svg>
             <div className="track-txt">Track your order</div>
           </div>
-          <div className="offers-container">
+          <NavLink to={"/shop"} className="offers-container">
             <svg
               width="16"
               height="16"
@@ -171,7 +171,7 @@ const Header = () => {
               />
             </svg>
             <div className="offers-txt">All Offers</div>
-          </div>
+          </NavLink>
         </div>
       </div>
       <div className="header-container">
@@ -220,7 +220,7 @@ const Header = () => {
             type="search"
             name="search"
             id="search"
-            placeholder="Search essentials, groceries and more..."
+            placeholder="Search electronics, toys and more..."
           />
         </div>
 

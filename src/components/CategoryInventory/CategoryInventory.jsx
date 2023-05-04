@@ -24,7 +24,7 @@ const CategoryInventory = () => {
   }, [categoriesMap, category]);
 
   return (
-    <div>
+    <div className="inventory">
       {products &&
         products.map((pdt) => {
           return <ProductCard key={pdt.id} product={pdt} />;

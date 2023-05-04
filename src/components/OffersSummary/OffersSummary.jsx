@@ -3,6 +3,11 @@ import "./OffersSummary.styles.scss";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../../store/cart/cart.action";
+import { selectCartItems } from "../../store/cart/cart.selector";
+
 const OffersSummary = ({ items }) => {
   const navigate = useNavigate();
 
@@ -41,7 +46,11 @@ const OffersSummary = ({ items }) => {
         {items &&
           items.map((item) => {
             return (
-              <div className="item-container" key={item.id}>
+              <NavLink
+                to={`/product/${item.id}`}
+                className="item-container"
+                key={item.id}
+              >
                 <div className="item-img-container">
                   <img
                     className="item-img"
@@ -67,7 +76,7 @@ const OffersSummary = ({ items }) => {
                     )}`}
                   </span>
                 </div>
-              </div>
+              </NavLink>
             );
           })}
       </div>

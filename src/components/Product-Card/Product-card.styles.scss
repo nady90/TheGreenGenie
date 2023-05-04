@@ -22,19 +22,46 @@
       font-size: 1.6rem;
 
       margin-top: 1rem;
-      color: var(--primary-color-1);
+      color: #222222;
       span {
         color: rgb(61, 61, 61);
       }
     }
   }
+  .btns-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    button {
+      padding: 1.2rem 3rem;
+      // max-width: 80%;
+      color: white;
+      background-color: #008ecc;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      font-weight: 600;
 
-  button {
-    padding: 1.2rem 3rem;
-    // max-width: 80%;
-    color: white;
-    background-color: var(--primary-color-1);
-    border: none;
-    border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+      }
+    }
+
+    .buy-btn:hover {
+      color: #008ecc;
+      background-color: #fff;
+      border: 3px solid #008ecc;
+    }
+
+    .details-btn {
+      background-color: #fff;
+      border: 3px solid #222222;
+      color: #222222;
+
+      &:hover {
+        background-color: #222222;
+        color: #fff;
+      }
+    }
   }
 }

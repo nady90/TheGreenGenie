@@ -27,6 +27,8 @@
       }
 
       .banner-container {
+        display: block;
+        cursor: pointer;
         position: relative;
         img {
           height: 100%;

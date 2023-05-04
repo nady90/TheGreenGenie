@@ -7,6 +7,7 @@ import Navigation from "./routes/navigation/Navigation";
 import Authentication from "./routes/authentication/Authentication";
 import Shop from "./routes/shop/Shop";
 import Checkout from "./routes/checkout/Checkout";
+import ProductPage from "./routes/ProductPage/ProductPage";
 
 import {
   onAuthStateChangedListener,
@@ -16,7 +17,6 @@ import {
 import { setCurrentUser } from "./store/user/user.action";
 import { useDispatch } from "react-redux";
 import { fetchCategoriesAsync } from "./store/categories/category.action.js";
-
 
 const App = () => {
   const dispatch = useDispatch();
@@ -54,6 +54,7 @@ const App = () => {
         <Route path="auth" element={<Authentication />} />
         <Route path="shop/*" element={<Shop />} />
         <Route path="checkout" element={<Checkout />} />
+        <Route path="product/*" element={<ProductPage />} />
       </Route>
     </Routes>
   );

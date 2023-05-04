@@ -46,12 +46,17 @@
     display: flex;
     justify-content: space-between;
 
+    a {
+      text-decoration: none;
+    }
+
     .item-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       cursor: pointer;
 
+      text-decoration: none !important;
       .image-container {
         // border: 1px solid #008ecc;
         border-radius: 50%;

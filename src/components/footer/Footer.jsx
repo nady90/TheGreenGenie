@@ -137,13 +137,19 @@ const Footer = () => {
       <FooterColumn
         title="My Account"
         links={["Sign in", "Register", "Order status"]}
+        paths={["/auth", "/auth", "/"]}
       />
 
-      <FooterColumn title="Help" links={["Shipping", "Returns", "Sizing"]} />
+      <FooterColumn
+        title="Help"
+        links={["Shipping", "Returns", "Sizing"]}
+        paths={["/", "/", "/"]}
+      />
 
       <FooterColumn
         title="Shop"
-        links={["All Products", "Bedroom", "Dinning Room"]}
+        links={["All Products", "Cameras", "Smart Phones"]}
+        paths={["/shop", "/shop/cameras", "/shop/smart phones"]}
       />
 
       <FooterColumn
@@ -153,6 +159,7 @@ const Footer = () => {
           "Terms & Conditions",
           "Privacy & Policy",
         ]}
+        paths={["/", "/", "/"]}
       />
 
       <div className="Copyright">
