@@ -56,15 +56,64 @@
           top: 20%;
           left: 10%;
           // background-color: #008ecc;
+
+          @media (max-width: 900px) {
+            top: 14%;
+            left: 10%;
+          }
+
+          @media (max-width: 900px) {
+            top: 20%;
+            left: 10%;
+          }
+
           .description {
             font-size: 3rem;
+            @media (max-width: 1000px) {
+              font-size: 2rem;
+            }
+
+            @media (max-width: 900px) {
+              font-size: 1.5rem;
+            }
+
+            @media (max-width: 900px) {
+              font-size: 1.3rem;
+            }
+            @media (max-width: 500px) {
+              font-size: 1.1rem;
+            }
           }
           .title {
             color: #fff;
             font-size: 6.3rem;
+
+            @media (max-width: 1000px) {
+              font-size: 5.3rem;
+            }
+
+            @media (max-width: 900px) {
+              font-size: 4.5rem;
+            }
+            @media (max-width: 900px) {
+              font-size: 3.1rem;
+            }
+            @media (max-width: 500px) {
+              font-size: 2.1rem;
+            }
           }
           .offer {
             font-size: 3rem;
+            @media (max-width: 1000px) {
+              font-size: 2.3rem;
+            }
+
+            @media (max-width: 900px) {
+              font-size: 1.9rem;
+            }
+            @media (max-width: 900px) {
+              font-size: 1.3rem;
+            }
           }
         }
       }
