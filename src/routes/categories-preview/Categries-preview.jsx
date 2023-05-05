@@ -16,7 +16,7 @@ function CategoriesPreview() {
   window.scrollTo(0, 0);
 
   return (
-    <>
+    <div className="categories-preview-container">
       {Object.keys(categoriesMap).map((title) => {
         const products = categoriesMap[title];
         return isLoading ? (
@@ -25,7 +25,7 @@ function CategoriesPreview() {
           <CategoryPreview key={title} title={title} products={products} />
         );
       })}
-    </>
+    </div>
     // <>
     //   {Object.keys(categoriesMap).map((title) => {
     //     return (

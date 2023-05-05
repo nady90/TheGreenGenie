@@ -4,14 +4,39 @@
   h2 {
     span {
       font-size: 3rem;
-      color: var(--primary-color-1);
+      color: #222222;
+
+      @media (width <=900px) {
+        font-size: 2.7rem;
+      }
     }
     margin-bottom: 2.5rem;
+    @media (width <=900px) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .pdts-container {
     display: flex;
     gap: 10rem;
     overflow-x: auto;
+
+    @media (width <=900px) {
+      gap: 5rem;
+    }
+
+    &::-webkit-scrollbar {
+      height: 15px;
+      width: 50px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #aaaaaa;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #008ecc;
+      border-radius: 30px;
+    }
   }
 }
