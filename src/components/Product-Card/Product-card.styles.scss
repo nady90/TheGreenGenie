@@ -43,6 +43,10 @@
 
       cursor: pointer;
 
+      @media screen and (700px < width <= 1200px) {
+        padding: 5px 3px;
+      }
+
       &:hover {
       }
     }

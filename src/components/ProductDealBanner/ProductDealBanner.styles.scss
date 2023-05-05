@@ -6,6 +6,11 @@
 
   position: relative;
 
+  @media screen and (600px < width <= 1200px) {
+    width: 40%;
+    margin-right: 10px;
+  }
+
   @media screen and (max-width: 900px) {
     width: 40%;
     margin-right: 10px;
@@ -47,6 +52,10 @@
 
     padding: 5px 10px;
 
+    @media screen and (600px < width <= 1200px) {
+      font-size: 13px;
+    }
+
     @media screen and (max-width: 900px) {
       margin-top: 5px;
       font-size: 6px;
@@ -63,6 +72,11 @@
 
     bottom: 20%;
     left: 5%;
+
+    @media screen and (600px < width <= 1200px) {
+      font-size: 14px;
+      left: 10%;
+    }
 
     @media screen and (max-width: 900px) {
       font-size: 8px;

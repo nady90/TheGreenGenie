@@ -8,6 +8,17 @@
   gap: 40px;
   border-bottom: 1px solid #ededed;
 
+  @media (600px < width <= 1200px) {
+    background-color: #fff;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ededed;
+  }
+
   @media screen and (max-width: 900px) {
     background-color: #fff;
     padding: 5px 10px;
@@ -42,6 +53,10 @@
       color: #008ecc;
       font-size: 3rem;
       font-weight: 700;
+
+      @media (600px < width <= 990px) {
+        font-size: 2rem;
+      }
 
       @media screen and (max-width: 900px) {
         font-size: 14px;
@@ -128,6 +143,10 @@
       font-weight: 700;
       gap: 5px;
       align-items: center;
+
+      @media (600px < width <= 990px) {
+        font-size: 1.2rem;
+      }
 
       @media screen and (max-width: 900px) {
         font-size: 10px;
@@ -268,8 +287,12 @@
   display: flex;
   align-items: center;
 
+  @media (600px < width <= 1200px) {
+    padding: 10px 40px;
+  }
+
   @media screen and (max-width: 900px) {
-    padding: 5px 10px;
+    padding: 15px 40px;
     // background: red;
     font-size: 1.1rem;
   }
@@ -298,6 +321,8 @@
       @media screen and (max-width: 900px) {
         gap: 2px;
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         font-size: 8px;
       }
     }
@@ -310,7 +335,7 @@
         gap: 2px;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         font-size: 8px;
       }
@@ -327,7 +352,7 @@
         gap: 2px;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         font-size: 8px;
       }

@@ -9,6 +9,14 @@
   display: flex;
   justify-content: space-between;
 
+  @media (width <= 1200px) {
+    height: 30.4rem;
+    padding: 3rem 2rem;
+    font-size: 1rem;
+
+    gap: 5px;
+  }
+
   @media screen and (max-width: 900px) {
     height: 30.4rem;
     padding: 3rem 2rem;
@@ -19,6 +27,16 @@
 
   .contacts {
     flex-basis: 30rem;
+
+    @media (width <= 1200px) {
+      flex-basis: 20%;
+    }
+
+    @media screen and (max-width: 900px) {
+      gap: 0px;
+      flex-basis: 20%;
+    }
+
     .logo-container {
       display: flex;
       align-items: center;
@@ -32,6 +50,10 @@
 
       svg {
         transform: rotate(0deg) scale(0.8);
+
+        @media (width <= 1200px) {
+          transform: scale(0.7);
+        }
 
         @media screen and (max-width: 900px) {
           transform: scale(0.5);

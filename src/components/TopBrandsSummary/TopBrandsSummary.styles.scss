@@ -12,6 +12,10 @@
     margin-top: 10px;
   }
 
+  @media screen and (600px < width <= 1200px) {
+    max-width: 85%;
+  }
+
   .top-div {
     display: flex;
     justify-content: space-between;

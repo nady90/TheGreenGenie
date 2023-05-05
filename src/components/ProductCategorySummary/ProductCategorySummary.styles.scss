@@ -6,6 +6,14 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (1200px < width <= 1555px) {
+    max-width: 75%;
+  }
+
+  @media screen and (600px < width <= 1200px) {
+    max-width: 85%;
+  }
+
   .top-div {
     display: flex;
     justify-content: space-between;
@@ -60,6 +68,14 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (1200px < width <= 1555px) {
+      overflow-x: auto;
+    }
+
+    @media screen and (600px < width <= 1200px) {
+      overflow-x: scroll;
+    }
+
     @media screen and (max-width: 900px) {
       overflow-x: scroll;
       padding: 15px 0px;
@@ -74,6 +90,14 @@
       flex-direction: column;
       justify-content: center;
       cursor: pointer;
+
+      @media screen and (1200px < width <= 1555px) {
+        margin-right: 20px;
+      }
+
+      @media screen and (600px < width <= 1200px) {
+        margin-right: 20px;
+      }
 
       @media screen and (max-width: 900px) {
         margin-right: 10px;

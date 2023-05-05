@@ -12,6 +12,11 @@
     margin-top: 10px;
   }
 
+  @media screen and (600px < width <= 1200px) {
+    max-width: 85%;
+    overflow-x: auto;
+  }
+
   .top-div {
     display: flex;
     justify-content: space-between;
@@ -70,6 +75,13 @@
       padding: 15px 0px;
       gap: 8px;
       overflow-x: auto;
+      align-items: center;
+    }
+
+    @media screen and (600px < width <= 1200px) {
+      overflow-x: auto;
+
+      gap: 18px;
     }
 
     .item-container {
@@ -84,6 +96,10 @@
       width: 15%;
 
       @media screen and (max-width: 900px) {
+        width: 30%;
+      }
+
+      @media screen and (600px < width <= 1200px) {
         width: 30%;
       }
 
