@@ -29,13 +29,13 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="btns-container">
         <button className="buy-btn" onClick={addProductToCart}>
-          BUY BUTTON
+          Buy
         </button>
         <button
           className="details-btn"
           onClick={() => navigate(`/product/${id}`)}
         >
-          PRODUCT DETAILS
+          More Details
         </button>
       </div>
     </div>

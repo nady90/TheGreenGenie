@@ -56,7 +56,7 @@ const ProductFullDetails = () => {
         </p>
 
         <button className="add-to-cart" onClick={addProductToCart}>
-          Add Item to Cart
+          Add to Cart
         </button>
       </div>
     </div>
