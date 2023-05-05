@@ -5,6 +5,12 @@
   cursor: pointer;
 
   position: relative;
+
+  @media screen and (max-width: 900px) {
+    width: 40%;
+    margin-right: 10px;
+  }
+
   .item-img {
     width: 30%;
     mix-blend-mode: multiply;
@@ -27,6 +33,7 @@
     top: 15%;
 
     font-size: 1.4rem;
+
     text-transform: capitalize;
     white-space: nowrap;
 
@@ -37,8 +44,15 @@
 
     box-sizing: content-box;
     margin: 0;
-    padding: 0;
+
     padding: 5px 10px;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 5px;
+      font-size: 6px;
+
+      padding: 2px 3px;
+    }
   }
 
   .banner-discount {
@@ -49,6 +63,11 @@
 
     bottom: 20%;
     left: 5%;
+
+    @media screen and (max-width: 900px) {
+      font-size: 8px;
+      display: none;
+    }
   }
 
   &:hover {

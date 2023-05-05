@@ -141,6 +141,7 @@ const Footer = () => {
       />
 
       <FooterColumn
+        type="footer-shipping"
         title="Help"
         links={["Shipping", "Returns", "Sizing"]}
         paths={["/", "/", "/"]}
@@ -153,6 +154,7 @@ const Footer = () => {
       />
 
       <FooterColumn
+        type="footer-legal"
         title="Legal Stuff"
         links={[
           "Shipping & Delivery",

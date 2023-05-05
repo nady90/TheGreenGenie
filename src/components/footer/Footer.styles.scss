@@ -8,6 +8,15 @@
 
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 900px) {
+    height: 30.4rem;
+    padding: 3rem 2rem;
+    font-size: 1rem;
+
+    gap: 10px;
+  }
+
   .contacts {
     flex-basis: 30rem;
     .logo-container {
@@ -16,9 +25,17 @@
       gap: 5px;
 
       cursor: pointer;
+      @media screen and (max-width: 900px) {
+        gap: 0px;
+        flex-basis: 20%;
+      }
 
       svg {
         transform: rotate(0deg) scale(0.8);
+
+        @media screen and (max-width: 900px) {
+          transform: scale(0.5);
+        }
 
         transition: transform 0.5s ease-in-out;
         &:hover {
@@ -28,6 +45,11 @@
       span {
         font-size: 2.5rem;
         font-weight: 700;
+
+        @media screen and (max-width: 900px) {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
       }
     }
 
@@ -36,6 +58,10 @@
 
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: 900px) {
+        margin-top: 10px;
+      }
 
       svg {
         width: 27px;
@@ -48,9 +74,14 @@
 
         outline: 0px;
 
+        @media screen and (max-width: 900px) {
+          height: 15px;
+          width: 15px;
+        }
+
         &:hover {
           outline: 1px solid #fff;
-          outline-offset: 2px;  
+          outline-offset: 2px;
         }
       }
     }
@@ -58,6 +89,7 @@
     .address {
       margin-top: 10px;
       font-weight: 700;
+
       span {
         display: block;
         margin-top: 10px;
@@ -69,5 +101,12 @@
   .Copyright {
     position: absolute;
     bottom: 30px;
+  }
+}
+
+.footer-legal,
+.footer-shipping {
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 }

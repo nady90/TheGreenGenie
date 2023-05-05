@@ -8,6 +8,10 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 900px) {
+    margin-top: 10px;
+  }
+
   .top-div {
     display: flex;
     justify-content: space-between;
@@ -23,16 +27,30 @@
       }
       border-bottom: 5px solid #008ecc;
       padding-bottom: 2rem;
+
+      @media screen and (max-width: 900px) {
+        font-size: 1.1rem;
+        padding-bottom: 7px;
+      }
     }
 
     .view-all-container {
       display: flex;
       align-items: center;
       gap: 5px;
+
+      @media screen and (max-width: 900px) {
+        padding-bottom: 7px;
+      }
+
       .view-all-link {
         text-decoration: none;
         font-size: 1.6rem;
         color: #222222;
+
+        @media screen and (max-width: 900px) {
+          font-size: 1.1rem;
+        }
       }
       svg {
       }
@@ -48,6 +66,12 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 900px) {
+      padding: 15px 0px;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
     .item-container {
       text-decoration: none;
       display: flex;
@@ -58,6 +82,10 @@
 
       gap: 4px;
       width: 15%;
+
+      @media screen and (max-width: 900px) {
+        width: 30%;
+      }
 
       .item-img-container {
         aspect-ratio: 1/1.5;
@@ -87,6 +115,17 @@
           right: -3px;
           border-top-right-radius: 15px;
           border-bottom-left-radius: 15px;
+
+          @media screen and (max-width: 900px) {
+            font-size: 7px;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            top: -3px;
+            right: -3px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 10px;
+          }
         }
       }
 
@@ -102,6 +141,10 @@
 
           white-space: nowrap;
           text-overflow: ellipsis;
+          @media screen and (max-width: 900px) {
+            margin-top: 3px;
+            font-size: 1.1rem;
+          }
         }
         .item-price {
           color: #222222;
@@ -110,6 +153,11 @@
           display: block;
 
           margin-top: 10px;
+
+          @media screen and (max-width: 900px) {
+            margin-top: 3px;
+            font-size: 1.1rem;
+          }
 
           .striked-price {
             font-weight: 400;
@@ -124,6 +172,12 @@
           margin-top: 12px;
 
           position: relative;
+
+          @media screen and (max-width: 900px) {
+            margin-top: 3px;
+            font-size: 1.1rem;
+          }
+
           &::before {
             display: block;
             content: "";
@@ -135,6 +189,10 @@
             top: -6px;
             left: 50%;
             transform: translateX(-50%);
+
+            @media screen and (max-width: 900px) {
+              display: none;
+            }
           }
         }
       }

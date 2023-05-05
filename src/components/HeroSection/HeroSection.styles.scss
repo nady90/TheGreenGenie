@@ -6,12 +6,20 @@
 
   padding: 50px 0px;
 
+  @media screen and (max-width: 900px) {
+    padding: 20px 10px;
+    height: 25vh;
+  }
   .carousel-container {
     // max-width: 120rem;
     height: 36.1rem;
     // background-color: red;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 900px) {
+      height: 16.1rem;
+    }
 
     .carousel {
       max-width: 120rem;
