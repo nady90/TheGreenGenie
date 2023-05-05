@@ -15,9 +15,31 @@
   max-height: 400px;
   overflow-y: scroll;
 
+  @media (max-width: 1000px) {
+    width: 310px;
+    right: 50px;
+  }
+
+  @media (max-width: 900px) {
+    width: 280px;
+    top: 60px;
+    right: 30px;
+  }
+
+  @media (max-width: 600px) {
+    width: 250px;
+    top: 60px;
+    right: 10px;
+  }
+
   .cart-dropdown-title {
     font-size: 2.3rem;
     margin-bottom: 10px;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+      margin-bottom: 7px;
+    }
   }
 
   button {
