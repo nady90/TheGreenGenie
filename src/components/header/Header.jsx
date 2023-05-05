@@ -55,6 +55,8 @@ const Header = () => {
     getGeoInfo();
   }, []);
 
+  useEffect(() => {}, []);
+
   const signOutHandler = async () => {
     dispatch(setIsCartOpen(false));
     console.log("logged out");
