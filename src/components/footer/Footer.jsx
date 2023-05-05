@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="contacts">
-        <div className="logo-container">
+        <NavLink to="/" className="logo-container">
           <svg
             width="56"
             height="56"
@@ -30,7 +30,7 @@ const Footer = () => {
           </svg>
 
           <span>TheBlueGenie</span>
-        </div>
+        </NavLink>
 
         <div className="socials-container">
           <svg
