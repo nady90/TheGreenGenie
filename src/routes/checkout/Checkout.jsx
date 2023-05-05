@@ -27,6 +27,11 @@ const Checkout = () => {
   const removeItemHandler = (item) =>
     dispatch(removeItemFromCart(cartItems, item));
 
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
   return (
     <div className="checkout-page">
       <h1>Shopping Cart</h1>
@@ -93,7 +98,7 @@ const Checkout = () => {
 
             <div className="price-container">
               <span>Price:</span>
-              <h2>{item.price * item.quantity}</h2>
+              <h2>{formatter.format(item.price * item.quantity)}</h2>
             </div>
 
             <span
@@ -108,7 +113,7 @@ const Checkout = () => {
         );
       })}
       <hr className="total-separator" />
-      <div className="total">Total: ${cartTotal}</div>
+      <div className="total">Total: {formatter.format(cartTotal)}</div>
     </div>
   );
 };
