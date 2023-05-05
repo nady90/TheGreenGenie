@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import axios from "axios";
@@ -31,6 +31,8 @@ const Header = () => {
   });
 
   const dispatch = useDispatch();
+
+  const searchResultsRef = useRef();
 
   const getGeoInfo = () => {
     axios
@@ -72,6 +74,27 @@ const Header = () => {
 
   const signInClickHandler = () => {
     navigate("auth");
+  };
+
+  const handleSearchClick = (e) => {
+    if (e.key === "Enter") {
+      navigate("/shop");
+      e.target.value = "";
+    }
+  };
+
+  const handleSearchChange = (e) => {
+    if (e.target.value !== "") {
+      searchResultsRef.current.style.display = "block";
+    } else {
+      searchResultsRef.current.style.display = "none";
+    }
+  };
+
+  const handleSearchDropdownClick = (e) => {
+    navigate("/shop");
+    e.target.parentNode.parentNode.querySelector("input").value = "";
+    searchResultsRef.current.style.display = "none";
   };
 
   return (
@@ -223,7 +246,18 @@ const Header = () => {
             name="search"
             id="search"
             placeholder="Search electronics, toys and more..."
+            onKeyDown={handleSearchClick}
+            onChange={handleSearchChange}
           />
+
+          <div
+            className="search-results-container"
+            ref={searchResultsRef}
+            onClick={handleSearchDropdownClick}
+          >
+            <div className="search-results-bg"></div>
+            <div className="search-results-content">View all our products</div>
+          </div>
         </div>
 
         <div className="icons-container">
