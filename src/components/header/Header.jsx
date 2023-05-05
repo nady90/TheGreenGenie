@@ -80,6 +80,7 @@ const Header = () => {
     if (e.key === "Enter") {
       navigate("/shop");
       e.target.value = "";
+      searchResultsRef.current.style.display = "none";
     }
   };
 
