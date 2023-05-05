@@ -27,8 +27,17 @@ const CartDropdown = () => {
        * Alert if clicked on outside of element
        */
       function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
+        if (
+          ref.current &&
+          !ref.current.contains(event.target) &&
+          event.target.className !== "cart-container" &&
+          !event.target.parentNode.classList.contains("cart-container") &&
+          !event.target.parentNode.parentNode.classList.contains(
+            "cart-container"
+          )
+        ) {
           // alert("You clicked outside of me!");
+          console.log("5555555555555555555555555555555555555", event.target);
           dispatch(setIsCartOpen(false));
         }
       }
